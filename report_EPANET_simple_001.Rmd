@@ -1,0 +1,32 @@
+---
+title: "Leak Isolation Problem"
+author: "Dr. Raúl Trujillo"
+date: "21 Januar 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Model-Based Leakage Localization method
+
+Leaks are assumed to be located in the nodes and simulated as an emiter coefficient $C_{j}$ generating a lekage size depending on the pressure of that node:
+
+$f_{j} = C_{j} \dot{} P^\gamma_{j}$
+
+Where:
+
+  - $f_{j}$ is the leak size,
+  - $C_{j}$ is the associated emitter coefficient; 
+  - $p_{j}$ is the pressure at node $j$ and
+  - $\gamma$ is an exponent in the range of $0.5$ (Hazen-Williams, Darcy-Weisbach, Chezy-Manning formulas).
+
+
+The method is based on comparing, at avery time instant $t$, the monitored perssure disturbances caused by leaks at certain inner nodes of the DMA network with the theoretical pressure desturbances caused by all potential leaks wich are obtained using the DMA hydraulic model.
+Thereby, the residual set, $\mathbf{r}(t)$, is determined by the diference between the mesured pressure at certain network nodes, $\mathbf{p}(t)$, and the predicted pressure at these nodes considering a leak-free scenario, $\hat{\mathbf{p}}(t)$.
+
+$\mathbf{r}(t) = \mathbf{p}(t) - \hat{\mathbf{p}}(t)$
+
+$\mathbf{r}(t) = \left[ ( p_1(t) - \hat{p}_1 (t) )  \cdots  ( p_{ns}(t) - \hat{p}_{ns}(t) )  \right]$
+
