@@ -366,7 +366,7 @@ BASIC DMA MODEL v00.03
 [VALVES]
 ;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
  PRV_001         	JT_01_001       	JT_0A_001       	300         	PRV 	0           	0           	;
- PRV_002         	JT_02_001       	JT_0K_011       	12          	PRV 	0           	0           	;
+ PRV_002         	JT_02_001       	JT_0K_011       	300          	PRV 	0           	0           	;
 
 [TAGS]
 

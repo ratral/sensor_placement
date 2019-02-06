@@ -1,0 +1,21 @@
+{
+    "name": "base_dma_02",
+    "version": "1.0",
+    "description": "",
+    "args": [
+        "base_dma_02.inp",
+        "base_dma_02.rpt", 
+        "base_dma_02.out"
+    ],
+    "input_files": [
+        "base_dma_02.inp"
+    ],
+    "output_files": {
+        "report"   : "base_dma_02.rpt", 
+        "allclose" : "base_dma_02.out" 
+    },
+	"to_analyze" : {
+	    "junctions" : "^JT_0[A-K]",
+		  "pipes"     : "PS_"
+	}
+}
